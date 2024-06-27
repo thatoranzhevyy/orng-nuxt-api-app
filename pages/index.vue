@@ -1,7 +1,9 @@
 <template>
-  <use-memory/>
-  <use-theme/>
+  <use-welcome/>
   <use-language/>
+  <use-theme/>
+  <use-memory/>
   <use-battery/>
   <use-network/>
+  <use-music/>
 </template>

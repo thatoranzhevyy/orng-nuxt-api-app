@@ -7,5 +7,5 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  modules: ['@nuxt/ui', "nuxt3-leaflet"],
+  modules: ['@nuxt/ui', "nuxt3-leaflet", "@vite-pwa/nuxt", "@nuxt/image"],
 })
