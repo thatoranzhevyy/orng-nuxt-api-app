@@ -10,11 +10,11 @@ const battery = reactive(useBattery())
     <div v-if="battery.isSupported" class="flex flex-col gap-4 size-full">
       <div v-if="battery.charging" class="text-green-500">
         <UIcon name="i-heroicons-bolt-solid" class="text-7xl" />
-        <div class="text-3xl">{{ 100 * battery.level }}%</div>
+        <div class="text-3xl">{{ (100 * battery.level).toFixed(0) }}%</div>
       </div>
       <div v-else>
         <UIcon name="i-heroicons-battery-100-solid" class="text-7xl" />
-        <div class="text-3xl">{{ 100 * battery.level }}%</div>
+        <div class="text-3xl">{{ (100 * battery.level).toFixed(0) }}%</div>
       </div>
     </div>
     <div v-else class="flex size-full items-center justify-center text-center text-xl font-bold">
