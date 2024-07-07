@@ -7,5 +7,5 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  modules: ['@nuxt/ui'],
+  modules: ['@nuxt/ui', "@nuxtjs/leaflet"],
 })

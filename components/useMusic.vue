@@ -17,7 +17,7 @@ export default {
       } catch (error) {
         // Handle any errors
       }
-      const timer = setInterval(fetchData, 60000);
+      // const timer = setInterval(fetchData, 60000);
     };
 
     onMounted(() => {
