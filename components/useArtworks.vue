@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const response = await fetch(
-    `https://orng.buhe.su/api/artwork?per_page=4&page=1`
+    `https://orng.buhe.su/api/artwork`
 )
 const items = [];
 const res = await response.json()
