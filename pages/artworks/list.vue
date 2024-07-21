@@ -22,8 +22,9 @@ const loadMore = () => {
 
 const loadArtworks = () => {
   pending.value = true;
-
-  $fetch(`https://orng.buhe.su/api/artwork`, {
+  const url = `https://orng.buhe.su/api/artwork`;
+  // const url = 'http://localhost:8000/api/artwork';
+  $fetch(url, {
     method: 'GET',
     params: {
       page: page.value
@@ -53,9 +54,9 @@ const appendArtworks = (newArtworks) => {
           <div>{{ artwork.artist.username }}</div>
         </div>
       </a>
-      <div v-html='artwork.title+artwork.description_html'> </div>
-      <div class="flex flex-col">
-        <artworks-items-list galleryID="my-test-gallery" :images="artwork.assets"/>
+      <div v-html='artwork.title+artwork.description_html'></div>
+      <div class="flex flex-col rounded-xl">
+        <artworks-items-list :galleryID="`gallery-list-${artwork.id}`" :images="artwork.assets"/>
       </div>
     </div>
     <u-button block label="Загрузить больше" @click="loadMore()" :loading="pending"/>

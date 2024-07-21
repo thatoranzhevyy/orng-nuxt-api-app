@@ -19,7 +19,8 @@ export default {
         gallery: '#' + this.$props.galleryID,
         children: 'a',
         zoom: false,
-        loop:false,
+        loop: false,
+        bgOpacity: 1,
         pswpModule: () => import('photoswipe'),
       });
       this.lightbox.init();
