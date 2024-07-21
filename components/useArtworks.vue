@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const response = await fetch(
-    `https://orng.buhe.su/api/artwork`
-)
+const response = await fetch('https://orng.buhe.su/api/artwork')
 const items = [];
 const res = await response.json()
 for (const datum of res.data) {

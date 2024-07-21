@@ -4,7 +4,7 @@
     <use-language/>
     <use-theme/>
     <use-memory/>
-    <nuxt-link class="col-span-4 md:col-span-1 bg-purple-600 rounded-3xl"></nuxt-link>
+    <div class="col-span-4 md:col-span-1 bg-purple-600 rounded-3xl"></div>
     <use-artworks/>
     <use-battery/>
     <use-network/>
