@@ -52,13 +52,7 @@ const appendArtworks = (newArtworks) => {
         </div>
       </a>
       <div class="flex flex-col">
-        <div class="flex flex-row flex-wrap gap-0.5">
-          <div v-for="asset in artwork.assets"
-               class="relative border-box overflow-hidden flex flex-auto items-center w-52 h-52">
-            <img class="rounded absolute w-full h-full left-0 right-0 top-0 bottom-0 object-cover"
-                 :src="asset.image_url">
-          </div>
-        </div>
+        <artworks-items-list galleryID="my-test-gallery" :images="artwork.assets"/>
       </div>
     </div>
     <u-button block label="Загрузить больше" @click="loadMore()" :loading="pending"/>
