@@ -5,6 +5,7 @@ import 'photoswipe/style.css';
 
 const page = ref(1);
 const lastPage = ref(1);
+const isLoaded = ref(false);
 const artworks = ref([]);
 const pending = ref(false);
 
@@ -30,6 +31,7 @@ const loadArtworks = () => {
   }).then(function (artworks) {
     appendArtworks(artworks.data);
     pending.value = false;
+    isLoaded.value = true;
     lastPage.value = artworks.last_page;
   });
 }
@@ -42,7 +44,7 @@ const appendArtworks = (newArtworks) => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-4 p-4">
     <div v-for="artwork in artworks">
       <a class="py-2 flex items-center space-x-4" :href="artwork.artist.permalink" target="_blank">
         <UAvatar size="xl" :src="artwork.artist.large_avatar_url" :alt="artwork.artist.full_name"/>
@@ -51,6 +53,7 @@ const appendArtworks = (newArtworks) => {
           <div>{{ artwork.artist.username }}</div>
         </div>
       </a>
+      <div v-html='artwork.title+artwork.description_html'> </div>
       <div class="flex flex-col">
         <artworks-items-list galleryID="my-test-gallery" :images="artwork.assets"/>
       </div>
