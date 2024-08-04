@@ -8,14 +8,16 @@ for (const datum of res.data) {
 </script>
 
 <template>
-  <div class="col-span-4 md:col-span-2 row-span-2 bg-gray-100 dark:bg-gray-800 rounded-3xl">
+  <div class="col-span-4 md:col-span-2 row-span-2 bg-gray-100 dark:bg-gray-800 rounded-xl">
     <UCarousel
         v-slot="{ item }"
         :items="items"
         :ui="{ item: 'basis-full' }"
         class="rounded-lg overflow-hidden"
         arrows>
-      <img :src="item" class="w-full object-cover h-96" draggable="false">
+      <nuxt-link to="/artworks">
+        <img :src="item" class="w-full object-cover h-96" draggable="false">
+      </nuxt-link>
     </UCarousel>
   </div>
 </template>

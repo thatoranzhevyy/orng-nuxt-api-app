@@ -33,7 +33,7 @@ export default {
 </script>
 
 <template>
-  <div class="col-span-4 md:col-span-2 bg-gray-100 dark:bg-gray-800 rounded-3xl px-4 py-2">
+  <div class="col-span-4 md:col-span-2 bg-gray-100 dark:bg-gray-800 rounded-xl px-4 py-2">
     <div v-if="recentTracks.length>0" class="flex gap-6 size-full items-center">
       <img class="size-32 rounded-md bg-gray-100 dark:bg-gray-900" :src="recentTracks[0].image[2]['#text']"/>
       <div>
@@ -42,10 +42,10 @@ export default {
       </div>
     </div>
     <div v-else class="flex gap-6 size-full items-center">
-      <USkeleton class="size-32 bg-gray-100 dark:bg-gray-900" />
+      <USkeleton class="size-32 bg-gray-100 dark:bg-gray-900"/>
       <div class="space-y-2">
-        <USkeleton class="h-4 w-[200px] bg-gray-100 dark:bg-gray-900" />
-        <USkeleton class="h-4 w-[160px] bg-gray-100 dark:bg-gray-900" />
+        <USkeleton class="h-4 w-[200px] bg-gray-100 dark:bg-gray-900"/>
+        <USkeleton class="h-4 w-[160px] bg-gray-100 dark:bg-gray-900"/>
       </div>
     </div>
   </div>

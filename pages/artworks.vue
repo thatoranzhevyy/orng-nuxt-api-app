@@ -46,6 +46,9 @@ const appendArtworks = (newArtworks) => {
 
 <template>
   <div class="flex flex-col gap-4 p-4">
+    <div class="flex items-center">
+      <u-button @click="$router.back()" label="назад"/>
+    </div>
     <div v-for="artwork in artworks">
       <a class="py-2 flex items-center space-x-4" :href="artwork.artist.permalink" target="_blank">
         <UAvatar size="xl" :src="artwork.artist.large_avatar_url" :alt="artwork.artist.full_name"/>
